@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function Image_picker(){
+            const list_gambar = ["woody.png", "jessie.png", "buzz.png"];
+            let pilihan =document.getElementById("option").value;
+
+            if( pilihan == "woody"){
+                let select = list_gambar[0];
+                document.getElementById("gambar").src = `img/${select}`;
+            }
+
+            if(pilihan == "jessie"){
+                let select = list_gambar[1];
+                document.getElementById("gambar").src =  `img/${select}`;
+            }
+
+            if(pilihan == "buzz"){
+                let select = list_gambar[2];
+                document.getElementById("gambar").src =  `img/${select}`;
+            }
+            
+        }
+
+    </script>
+</head>
+<body>
+    <h1>Image Picker</h1>
+    <select name="" id="option" onchange="Image_picker()">
+        <option value="">Pilih Gambar</option>
+        <option value="woody"> Woody </option>
+        <option value="jessie"> Jessie </option>
+        <option value="buzz"> Buzz </option>
+    </select>
+    <div class="container">
+        <img id="gambar">
+    </div>
+</body>
+</html>
